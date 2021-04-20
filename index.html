@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+    
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<h3 style="text-align: center; color: cadetblue; margin-top: 20px;">MM-Mangas</h3>
+<body>
+        <div class="container">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        </div>
+  <hr>
+<ul id="myUL">
+    <li>
+        <a href="chainswaman/">Chainsaw Man 
+            <p style="display: none;">チェンソーマン </p> <!--japanese name -->
+            <p style="display: none;">Tatsuki Fujimoto </p> <!-- written by -->
+
+            <br> <img style="margin-top: 5px;" src="chainswaman/chainsawman.jpg" width="140" height="210" alt=""></a>
+    </li>
+    <li>
+        <a href="saekano/">How to Raise a Boring Girlfriend</a>
+    </li>   
+    <li>
+        <a href="Violet/">Violet Evergarden</a>
+    </li>   
+    <li>
+        <a href=""></a>
+    </li>   
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<p class="copyright">Copyright @ 2020 Name . Designed by VIOLET2F</p>
+</body>
+</html>
